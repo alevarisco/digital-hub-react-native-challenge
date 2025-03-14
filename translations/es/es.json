@@ -1,0 +1,30 @@
+{
+  "HOME": {
+    "TAB_TITLE": "Home"
+  },
+  "DATA_LIST": {
+    "TAB_TITLE": "Lista de datos",
+    "TITLE_PAGE": "Lista de datos",
+    "BTN_ADD": "Agregar",
+    "BTN_DELETE": "Eliminar",
+    "BTN_EDIT": "Editar",
+    "BTN_SEARCH": "Buscar",
+    "INPUT_SEARCH_NAME": "Nombre",
+    "TABLE": {
+      "COL1": "Marca",
+      "COL2": "País",
+      "COL3": "Tipo"
+    }
+  },
+  "GEOLOCATION": {
+    "TAB_TITLE": "Ubicación",
+    "TITLE_PAGE": "Ubicación actual",
+    "YOUR_LAT": "Tu latitud es: ",
+    "YOUR_LONG": "Tu longitud es: "
+  },
+  "SETTINGS": {
+    "TAB_TITLE": "Ajustes",
+    "TITLE_PAGE": "Ajustes",
+    "SUBTITLE_PAGE": "Lenguage actual"
+  }
+}

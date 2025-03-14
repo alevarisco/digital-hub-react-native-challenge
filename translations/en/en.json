@@ -1,0 +1,30 @@
+{
+  "HOME": {
+    "TAB_TITLE": "Inicio"
+  },
+  "DATA_LIST": {
+    "TAB_TITLE": "Lista de datos",
+    "TITLE_PAGE": "Data List",
+    "BTN_ADD": "Add",
+    "BTN_DELETE": "Delete",
+    "BTN_EDIT": "Edit",
+    "BTN_SEARCH": "Search",
+    "INPUT_SEARCH_NAME": "Name",
+    "TABLE": {
+      "COL1": "Brand",
+      "COL2": "Country",
+      "COL3": "Type"
+    }
+  },
+  "GEOLOCATION": {
+    "TAB_TITLE": "Geolocation",
+    "TITLE_PAGE": "Currently Geolocation",
+    "YOUR_LAT": "Your latitude is: ",
+    "YOUR_LONG": "Your longitude is: "
+  },
+  "SETTINGS": {
+    "TAB_TITLE": "Settings",
+    "TITLE_PAGE": "Settings",
+    "SUBTITLE_PAGE": "Current language"
+  }
+}
