@@ -23,8 +23,11 @@ import IconSettingsSelected from '../assets/images/icon_mi_cuenta_selected.png';
 
 import Home from './ui/pages/home/home';
 import DataList from './ui/pages/dataList/dataList';
+import DataDetail from './ui/pages/dataList/dataDetail';
+import DataForm from './ui/pages/dataList/dataForm';
 import Settings from './ui/pages/settings/settings';
 import Geolocation from './ui/pages/geolocalization/geolocalization';
+
 import { Provider } from 'react-redux';
 import {  store } from './ui/redux/store';
 
@@ -34,6 +37,7 @@ export default function App() {
     {
       id: 0,
       title: 'HOME.TAB_TITLE',
+      name: 'Home',
       iconUnselected: IconHome,
       iconSelected: IconHomeSelected,
       view: Home,
@@ -42,6 +46,7 @@ export default function App() {
     {
       id: 1,
       title: 'DATA_LIST.TAB_TITLE',
+      name: 'DataList',
       iconUnselected: IconUsers,
       iconSelected: IconUsersSelected,
       view: DataList,
@@ -50,6 +55,7 @@ export default function App() {
     {
       id: 2,
       title: 'GEOLOCATION.TAB_TITLE',
+      name: 'Geolocation',
       iconUnselected: IconGeolocation,
       iconSelected: IconGeolocationSelected,
       view: Geolocation,
@@ -58,6 +64,7 @@ export default function App() {
     {
       id: 3,
       title: 'SETTINGS.TAB_TITLE',
+      name: 'Settings',
       iconUnselected: IconSettings,
       iconSelected: IconSettingsSelected,
       view: Settings,
@@ -65,10 +72,20 @@ export default function App() {
     },
     {
       id: 4,
-      title: 'Settings Detail',
+      title: 'DATA_DETAIL.TAB_TITLE',
+      name: 'Detail',
       iconUnselected: IconSettings,
       iconSelected: IconSettingsSelected,
-      view: Settings,
+      view: DataDetail,
+      show: false,
+    },
+    {
+      id: 5,
+      title: 'DATA_ADD.TAB_TITLE',
+      name: 'Form',
+      iconUnselected: IconSettings,
+      iconSelected: IconSettingsSelected,
+      view: DataForm,
       show: false,
     },
   ];

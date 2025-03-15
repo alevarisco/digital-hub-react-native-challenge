@@ -6,14 +6,18 @@ import Button from '../button/button';
 const Table = (props: any) => {
 
   return (
-    <ScrollView horizontal={true}>
+    <ScrollView horizontal={false} alwaysBounceVertical={false}>
       <View style={styles.table}>
         {/* Headers */}
         <View style={styles.row}>
-          {props.headers.map((header: any, i: number) => (
-            <View key={i} style={styles.cellHeader}>
-              <Text style={styles.textHeader}>{props.t(header)}</Text>
-            </View>
+          {props.headers.map((h: any, i: number) => (
+            <TouchableOpacity
+                key={i}
+                style={styles.cellHeader}
+                onPress={() => props.onHeaderSelect(h)}
+            >
+              <Text style={styles.textHeader}>{props.t(h.header)}</Text>
+            </TouchableOpacity>
           ))}
         </View>
 
@@ -42,8 +46,10 @@ const Table = (props: any) => {
               </View>
           </TouchableOpacity>
         ))}
-      <Button title={'next'} onPress={props.nextPage}/>
-      <Button title={'prev'} onPress={props.prevPage}/>
+        <View style={styles.btnContainer}>
+            <Button title={props.t('COMPONENTS.TABLE.BTN_PREV')} onPress={props.prevPage}/>
+            <Button title={props.t('COMPONENTS.TABLE.BTN_NEXT')} onPress={props.nextPage}/>
+        </View>
       </View>
     </ScrollView>
   );
@@ -73,7 +79,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   textCell: {
-    // width: '30%',
     fontFamily: 'Open Sans, sans-serif',
     fontSize: 16,
   },
@@ -81,6 +86,12 @@ const styles = StyleSheet.create({
     fontFamily: 'Open Sans, sans-serif',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  btnContainer: {
+    width: '95%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingTop: 10,
   },
 });
 

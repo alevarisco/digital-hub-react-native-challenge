@@ -1,20 +1,35 @@
 {
   "HOME": {
-    "TAB_TITLE": "Home"
+    "TAB_TITLE": "Inicio"
   },
   "DATA_LIST": {
     "TAB_TITLE": "Lista de datos",
     "TITLE_PAGE": "Lista de datos",
     "BTN_ADD": "Agregar",
+    "BTN_ADD_SIGN": "+",
     "BTN_DELETE": "Eliminar",
     "BTN_EDIT": "Editar",
     "BTN_SEARCH": "Buscar",
-    "INPUT_SEARCH_NAME": "Nombre",
+    "INPUT_SEARCH_NAME": "Buscar",
     "TABLE": {
       "COL1": "Marca",
       "COL2": "País",
       "COL3": "Tipo"
     }
+  },
+  "DATA_DETAIL": {
+    "TAB_TITLE": "Detalle",
+    "TITLE_PAGE": "Detalle"
+  },
+  "DATA_ADD": {
+    "TITLE_PAGE": "Agrega una nueva marca",
+    "INPUT_NAME": "Nombre",
+    "INPUT_COUNTRY": "País",
+    "INPUT_TYPE": "Tipo",
+    "INPUT_DESCRIPTION": "Descripción",
+    "BTN_ADD": "Agrega",
+    "BTN_LOADING": "Cargando...",
+    "BTN_BACK": "Atrás"
   },
   "GEOLOCATION": {
     "TAB_TITLE": "Ubicación",
@@ -25,6 +40,12 @@
   "SETTINGS": {
     "TAB_TITLE": "Ajustes",
     "TITLE_PAGE": "Ajustes",
-    "SUBTITLE_PAGE": "Lenguage actual"
+    "SUBTITLE_PAGE": "Idioma actual"
+  }, 
+  "COMPONENTS": {
+    "TABLE": {
+      "BTN_NEXT": "Siguiente",
+      "BTN_PREV": "Previa"
+    }
   }
 }

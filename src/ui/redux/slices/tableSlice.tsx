@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { GetBrandsResponseDto } from '../../../services/brand/brand.interface';
+import { Brand } from '../../../services/brand/brand.interface';
 import { BrandTableState } from '../types';
 
 const initialState: BrandTableState = {
@@ -8,7 +8,7 @@ const initialState: BrandTableState = {
     page: 1,
     limit: 10,
     sort: '',
-    order: '',
+    order: 'ASC',
     end: false,
     query: undefined,
   },
@@ -18,7 +18,7 @@ const tableSlice = createSlice({
   name: 'table',
   initialState,
   reducers: {
-    fetchItemsSuccess(state, action: PayloadAction<{ items: GetBrandsResponseDto[] }>) {
+    fetchItemsSuccess(state, action: PayloadAction<{ items: Brand[] }>) {
       state.items = action.payload.items;
     },
     setPage(state, action: PayloadAction<number>) {

@@ -1,5 +1,5 @@
-export interface GetBrandsResponseDto {
-    id: number,
+export interface Brand {
+    id?: number,
     nombre: string,
     descripcion: string,
     pais: string,

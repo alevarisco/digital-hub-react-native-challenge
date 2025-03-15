@@ -9,15 +9,16 @@ export default function Title(props: any) {
     return (
         <View style={styles.titleContainer}>
             <Text style={styles.title}>{props.title}</Text>
+            {props.button ? props.button : null}
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     titleContainer: {
-        width: '100%',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         margin: 20,
+        flexDirection: 'row',
     },
     title: {
         fontFamily: 'Open Sans, sans-serif',

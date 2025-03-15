@@ -1,20 +1,34 @@
 {
   "HOME": {
-    "TAB_TITLE": "Inicio"
+    "TAB_TITLE": "Home"
   },
   "DATA_LIST": {
-    "TAB_TITLE": "Lista de datos",
+    "TAB_TITLE": "Data List",
     "TITLE_PAGE": "Data List",
     "BTN_ADD": "Add",
+    "BTN_ADD_SIGN": "+",
     "BTN_DELETE": "Delete",
     "BTN_EDIT": "Edit",
     "BTN_SEARCH": "Search",
-    "INPUT_SEARCH_NAME": "Name",
+    "INPUT_SEARCH_NAME": "Search",
     "TABLE": {
       "COL1": "Brand",
       "COL2": "Country",
       "COL3": "Type"
     }
+  },
+  "DATA_DETAIL": {
+    "TAB_TITLE": "Detail",
+    "TITLE_PAGE": "Detail List"
+  },
+  "DATA_ADD": {
+    "TITLE_PAGE": "Add a new brand",
+    "INPUT_NAME": "Name",
+    "INPUT_COUNTRY": "Country",
+    "INPUT_TYPE": "Type",
+    "INPUT_DESCRIPTION": "Description",
+    "BTN_ADD": "Add",
+    "BTN_BACK": "Back"
   },
   "GEOLOCATION": {
     "TAB_TITLE": "Geolocation",
@@ -26,5 +40,11 @@
     "TAB_TITLE": "Settings",
     "TITLE_PAGE": "Settings",
     "SUBTITLE_PAGE": "Current language"
+  },
+  "COMPONENTS": {
+    "TABLE": {
+      "BTN_NEXT": "Next",
+      "BTN_PREV": "Prev"
+    }
   }
 }

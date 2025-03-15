@@ -9,9 +9,13 @@ import {
  function Button(props: any) {
     return (
         <TouchableOpacity
+            disabled={props.disabled}
             style={
                 props.style === 'default' ?
                 styles.buttonDefault
+                :
+                props.style === 'noline' ?
+                styles.buttonNoline
                 :
                 styles.buttonOutline
             }
@@ -47,6 +51,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         paddingHorizontal: 20,
         borderColor: '#3e81ff',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buttonNoline: {
+        backgroundColor: '#00000',
+        height: 35,
         justifyContent: 'center',
         alignItems: 'center',
     },
