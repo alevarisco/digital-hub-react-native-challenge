@@ -9,27 +9,31 @@ import {
 import i18n from 'i18next';
 import {withTranslation} from 'react-i18next';
 import Title from '../../components/title/title';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLanguage } from '../../redux/slices/languageSlice';
+import { RootState } from '../../redux/store';
 
 //@ts-ignore
 import IconEnFlag from '../../../../assets/images/en-flag.png';
 //@ts-ignore
 import IconEsFlag from '../../../../assets/images/es-flag.png';
 
-function Settings(props: any) {
-  const [isEnabled, setIsEnabled] = useState(false);
 
-  const setLanguage = (lang: any) => {
-    setIsEnabled(previousState => !previousState);
-    if(lang){
-      i18n.changeLanguage('es');
-    }else {
-      i18n.changeLanguage('en');
-    }
+function Settings(props: any) {
+  const dispatch = useDispatch();
+  const isEnglish = useSelector((state: RootState) => state.language.isSpanish);
+
+  const handleSetLanguage = (lang: boolean) => {
+    dispatch(setLanguage(lang));
+    i18n.changeLanguage(lang ? 'es' : 'en');
   };
 
   useEffect(() => {
-    setIsEnabled(i18n.language === 'es' ? true : false);
-  }, []);
+    const currentLang = i18n.language === 'es';
+    if (currentLang !== isEnglish) {
+      dispatch(setLanguage(currentLang));
+    }
+  }, [dispatch, isEnglish]);
 
   return (
     <View style={styles.settingsContainer}>
@@ -43,10 +47,10 @@ function Settings(props: any) {
             <Image source={IconEnFlag} />
             <Switch
               trackColor={{false: '#767577', true: '#81b0ff'}}
-              thumbColor={isEnabled ? '#0b577b' : '#f4f3f4'}
+              thumbColor={isEnglish ? '#0b577b' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"
-              onValueChange={setLanguage}
-              value={isEnabled}
+              onValueChange={handleSetLanguage}
+              value={isEnglish}
               />
             <Image source={IconEsFlag} />
           </View>

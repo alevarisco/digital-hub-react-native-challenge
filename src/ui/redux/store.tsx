@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import tableReducer from './slices/tableSlice';
+import languageReducer from './slices/languageSlice';
 
 export const store = configureStore({
   reducer: {
     table: tableReducer,
+    language: languageReducer,
   },
 });
 
