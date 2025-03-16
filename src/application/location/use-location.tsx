@@ -1,33 +1,25 @@
 import Geolocation from '@react-native-community/geolocation';
-import { Location } from '../../domain/location';
+import { useEffect, useState } from 'react';
 
-export default function useLocation(): Location  {
+export default function useLocation()  {
 
-    Geolocation.getCurrentPosition(
-        (position: any) => {
-            const { latitude, longitude } = position.coords;
-            return {
-                latitude: {
-                    title: 'GEOLOCATION.YOUR_LAT',
-                    value: latitude,
-                },
-                longitude: {
-                    title: 'GEOLOCATION.YOUR_LONG',
-                    value: longitude,
-                },
-            };
-        },
-        (error) => console.log(error),
-          { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
-    );
+    const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
 
-    return {
-        latitude: {
-            title: 'GEOLOCATION.YOUR_LAT',
-            value: 0,
-        },
-        longitude: {
-            title: 'GEOLOCATION.YOUR_LONG',
-            value: 0,
-        },
-    };}
+    useEffect(() => {
+      (async () => {
+        Geolocation.getCurrentPosition(
+            (position: any) => {
+                const { latitude, longitude } = position.coords;
+                setLocation({
+                    latitude: latitude,
+                    longitude: longitude,
+                  });
+            },
+            (error) => console.log(error),
+              { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+        );
+      })();
+    }, []);
+
+    return location || { latitude: 0, longitude: 0 };
+}

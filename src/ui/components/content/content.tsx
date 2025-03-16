@@ -7,17 +7,17 @@ import {
   } from 'react-native';
 
  function Content(props: any) {
+
     return (
         <View style={styles.contentContainerPrincipal}>
             <View style={styles.contentContainer}>
-                {props.text && props.text.map((t: any, i: number) => {
-                    return (
+                {props.text && props.text.map((t: any , i: number) => (
+
                         <View style={styles.mapContainer} key={i}>
                             <Text style={styles.title}>{props.t(t.title)}</Text>
-                            <Text style={styles.text}>{t.value}</Text>
+                            <Text style={styles.text}>{t.value ?? 'Loading...'}</Text>
                         </View>
-                    );
-                })}
+                ))}
             </View>
         </View>
     );

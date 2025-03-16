@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   StyleSheet,
   View,
@@ -11,11 +11,17 @@ import {withTranslation} from 'react-i18next';
 
 function Geolocalization(props: any) {
   const {latitude, longitude} = useLocation();
+  const isLoading = latitude === 0 && longitude === 0;
+
+  const locationData = [
+    { title: 'GEOLOCATION.YOUR_LAT', value: isLoading ? 'Loading...' : latitude },
+    { title: 'GEOLOCATION.YOUR_LONG', value: isLoading ? 'Loading...' : longitude },
+  ];
 
   return (
     <View style={styles.geolocalizationContainer}>
         <Title title={props.t('GEOLOCATION.TITLE_PAGE')}/>
-        <Content text={[latitude, longitude]}/>
+        <Content text={locationData} />
     </View>
   );
 }
