@@ -20,7 +20,12 @@
   },
   "DATA_DETAIL": {
     "TAB_TITLE": "Detail",
-    "TITLE_PAGE": "Brand Detail"
+    "TITLE_PAGE": "Brand Detail",
+    "TEXT_NAME": "Brand name",
+    "TEXT_COUNTRY": "Country",
+    "TEXT_TYPE": "Type",
+    "TEXT_YEAR": "Year of foundation",
+    "TEXT_DESCRIPTION": "Description"
   },
   "DATA_ADD": {
     "TITLE_PAGE": "Add a new brand",
@@ -29,6 +34,7 @@
     "INPUT_COUNTRY": "Country",
     "INPUT_TYPE": "Type",
     "INPUT_DESCRIPTION": "Description",
+    "INPUT_YEAR": "Year of foundation",
     "BTN_ADD": "Add",
     "BTN_EDIT": "Edit",
     "BTN_BACK": "Back"

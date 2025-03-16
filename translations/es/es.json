@@ -20,7 +20,12 @@
   },
   "DATA_DETAIL": {
     "TAB_TITLE": "Detalle",
-    "TITLE_PAGE": "Detalle de la marca"
+    "TITLE_PAGE": "Detalle de la marca",
+    "TEXT_NAME": "Nombre de la marca",
+    "TEXT_COUNTRY": "País",
+    "TEXT_TYPE": "Tipo",
+    "TEXT_YEAR": "Año de fundación",
+    "TEXT_DESCRIPTION": "Descripción"
   },
   "DATA_ADD": {
     "TITLE_PAGE": "Agrega una nueva marca",
@@ -29,6 +34,7 @@
     "INPUT_COUNTRY": "País",
     "INPUT_TYPE": "Tipo",
     "INPUT_DESCRIPTION": "Descripción",
+    "INPUT_YEAR": "Año de fundación",
     "BTN_ADD": "Agregar",
     "BTN_EDIT": "Editar",
     "BTN_LOADING": "Cargando...",
