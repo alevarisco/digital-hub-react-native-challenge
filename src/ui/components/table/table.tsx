@@ -1,7 +1,10 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
-import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import Button from '../button/button';
+
+import IconEdit from '../../../../assets/images/pencil.png';
+import IconDelete from '../../../../assets/images/trash.png';
 
 const Table = (props: any) => {
 
@@ -27,22 +30,32 @@ const Table = (props: any) => {
                 onPress={() => props.onSelect(row)}
             >
               <View
-                key={iRow}
+                // key={iRow}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.nombre}</Text>
               </View>
               <View
-                key={iRow + row.id}
+                // key={iRow + row.id}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.pais}</Text>
               </View>
               <View
-                key={iRow + row.id + 1}
+                // key={iRow + row.id + 1}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.tipo}</Text>
+              </View>
+              <View
+                // key={iRow + row.id  1}
+                style={styles.cellRow}>
+                    <TouchableOpacity onPress={() => props.onPressEdit(row)}>
+                        <Image source={IconEdit}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => props.onPressDelete(row)}>
+                        <Image source={IconDelete}/>
+                    </TouchableOpacity>
               </View>
           </TouchableOpacity>
         ))}
@@ -64,14 +77,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   cell: {
-    width: '30%',
+    width: '20%',
     borderWidth: 1,
     borderColor: '#ccc',
     padding: 8,
     minWidth: 100,
   },
+  cellRow: {
+    width: '20%',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 8,
+    minWidth: 100,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   cellHeader: {
-    width: '30%',
+    width: '20%',
     borderWidth: 0.7,
     borderColor: '#ccc',
     padding: 8,

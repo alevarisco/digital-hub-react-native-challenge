@@ -11,3 +11,15 @@ export const saveBrandUseCase = async (brandRepository: BrandRepository, brand: 
   return await brandRepository.postBrand(brand);
 };
 
+export const saveEditBrandUseCase = async (brandRepository: BrandRepository, brand: Brand, brandId: number | string)  => {
+  return await brandRepository.editBrand(brand, brandId);
+};
+
+export const detailBrandUseCase = async (brandRepository: BrandRepository, brandId: number | string)  => {
+  return await brandRepository.detailBrand(brandId);
+};
+
+export const deleteBrandUseCase = async (brandRepository: BrandRepository, brandId: number | string)  => {
+  return await brandRepository.deleteBrand(brandId);
+};
+

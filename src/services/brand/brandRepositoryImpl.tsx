@@ -34,4 +34,26 @@ export const brandRepository : BrandRepository = {
     });
     return res.data;
   },
+
+  async editBrand(brand: Brand, brandId: number | string) : Promise<Brand> {
+    const res = await apiClient(`/brands/${brandId}`, {
+      method: 'PUT',
+      data: brand,
+    });
+    return res.data;
+  },
+
+  async detailBrand(brandId: number | string) : Promise<Brand> {
+    const res = await apiClient(`/brands/${brandId}`, {
+      method: 'GET',
+    });
+    return res.data;
+  },
+
+  async deleteBrand(brandId: number | string) : Promise<Brand> {
+    const res = await apiClient(`/brands/${brandId}`, {
+      method: 'DELETE',
+    });
+    return res.data;
+  },
 };

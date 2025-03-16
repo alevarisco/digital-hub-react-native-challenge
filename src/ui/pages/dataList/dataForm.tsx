@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
   View,
@@ -8,19 +8,31 @@ import Title from '../../components/title/title';
 import { withTranslation } from 'react-i18next';
 import Button from '../../components/button/button';
 import TextInput from '../../components/text-input/text-input';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { Brand } from '@/services/brand/brand.interface';
-import { saveBrandUseCase } from '../../../application/brand/use-get-brands';
+import { saveBrandUseCase, saveEditBrandUseCase } from '../../../application/brand/use-get-brands';
 import { brandRepository } from '../../../services/brand/brandRepositoryImpl';
 
 function DataForm(props: any) {
   const navigation = useNavigation();
+  const route = useRoute();
+  const { param = {} } = route.params || {};
+  const isParamEmpty = Object.keys(param).length === 0;
+
   const [name, setName] = useState('');
   const [country, setCountry] = useState('');
   const [type, setType] = useState('');
   const [description, setDescription] = useState('');
 
+  const handleCleanInputs = () => {
+    setName('');
+    setCountry('');
+    setType('');
+    setDescription('');
+  };
+
   const handleBack = () => {
+    handleCleanInputs();
     navigation.navigate('DataList');
   };
 
@@ -35,17 +47,40 @@ function DataForm(props: any) {
       tipo: type,
       descripcion: description,
     };
-    await saveBrandUseCase(brandRepository, formData);
-    setName('');
-    setCountry('');
-    setType('');
-    setDescription('');
+    if(isParamEmpty) {
+      await saveBrandUseCase(brandRepository, formData);
+      // handleCleanInputs();
+      // navigation.navigate('DataList');
+    }else {
+      console.log('aquiiiiiiii');
+      await saveEditBrandUseCase(brandRepository, formData, param.id);
+    }
+    handleCleanInputs();
     navigation.navigate('DataList');
   };
 
+  const handleSet = () => {
+    setName(param.nombre);
+    setCountry(param.pais);
+    setType(param.tipo);
+    setDescription(param.descripcion);
+  };
+
+  useEffect(() => {
+    if(!isParamEmpty) {
+      handleSet();
+    }
+  }, []);
+
   return (
     <View style={styles.dataFormContainer}>
-      <Title title={props.t('DATA_ADD.TITLE_PAGE')}/>
+      <Title
+        title={
+          !isParamEmpty ?
+            props.t('DATA_ADD.TITLE_DETAIL_PAGE')
+          :
+            props.t('DATA_ADD.TITLE_PAGE')
+      }/>
       <View style={styles.dataFormBackContainer}>
         <Button
           style={'noline'}
@@ -57,23 +92,27 @@ function DataForm(props: any) {
         <View style={styles.dataFormInputContainer}>
           <TextInput
             title={props.t('DATA_ADD.INPUT_NAME')}
+            value={name}
             onChangeText={setName}
           />
           <TextInput
             title={props.t('DATA_ADD.INPUT_COUNTRY')}
+            value={country}
             onChangeText={setCountry}
           />
           <TextInput
             title={props.t('DATA_ADD.INPUT_TYPE')}
+            value={type}
             onChangeText={setType}
           />
           <TextInput
             title={props.t('DATA_ADD.INPUT_DESCRIPTION')}
+            value={description}
             onChangeText={setDescription}
           />
           <Button
             style={'default'}
-            title={props.t('DATA_ADD.BTN_ADD')}
+            title={!isParamEmpty ? props.t('DATA_ADD.BTN_EDIT') : props.t('DATA_ADD.BTN_ADD')}
             onPress={handleSave}
             disabled={!isFormValid()}
           />

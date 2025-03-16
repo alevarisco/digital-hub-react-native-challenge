@@ -14,20 +14,23 @@
     "TABLE": {
       "COL1": "Brand",
       "COL2": "Country",
-      "COL3": "Type"
+      "COL3": "Type",
+      "COL4": "Actions"
     }
   },
   "DATA_DETAIL": {
     "TAB_TITLE": "Detail",
-    "TITLE_PAGE": "Detail List"
+    "TITLE_PAGE": "Brand Detail"
   },
   "DATA_ADD": {
     "TITLE_PAGE": "Add a new brand",
+    "TITLE_DETAIL_PAGE": "Edit the brand",
     "INPUT_NAME": "Name",
     "INPUT_COUNTRY": "Country",
     "INPUT_TYPE": "Type",
     "INPUT_DESCRIPTION": "Description",
     "BTN_ADD": "Add",
+    "BTN_EDIT": "Edit",
     "BTN_BACK": "Back"
   },
   "GEOLOCATION": {

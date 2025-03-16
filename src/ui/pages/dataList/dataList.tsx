@@ -10,7 +10,7 @@ import Table from '../../components/table/table';
 import TextInput from '../../components/text-input/text-input';
 import Button from '../../components/button/button';
 
-import { brandUseCase } from '../../../application/brand/use-get-brands';
+import { brandUseCase, deleteBrandUseCase, detailBrandUseCase } from '../../../application/brand/use-get-brands';
 import { brandRepository } from '../../../services/brand/brandRepositoryImpl';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
@@ -44,10 +44,17 @@ function DataList(props: any) {
       header: 'DATA_LIST.TABLE.COL3',
       value: 'tipo',
     },
+    {
+      id: 3,
+      header: 'DATA_LIST.TABLE.COL4',
+      value: 'actions',
+      button: true,
+    },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleGetData = async () => {
-    const data = await brandUseCase(brandRepository, pagination);
+    let data = await brandUseCase(brandRepository, pagination);
     dispatch(fetchItemsSuccess({ items: data }));
   };
 
@@ -56,11 +63,13 @@ function DataList(props: any) {
       dispatch(setPage(pagination.page + 1));
     }
   };
+
   const handlePrevPage = () => {
     if (pagination.page > 1) {
       dispatch(setPage(pagination.page - 1));
     }
   };
+
   const handleSort = (header: any) => {
     console.log(header);
     dispatch(setSort(header.value));
@@ -72,19 +81,34 @@ function DataList(props: any) {
     }
   };
 
+  const handleDelete = async (row: any) => {
+    await deleteBrandUseCase(brandRepository, row.id);
+    handleGetData();
+  };
+
+  const handleEdit =  async (row: any) => {
+    const detail = await detailBrandUseCase(brandRepository, row.id);
+    navigation.navigate('Form', {param: detail});
+  };
+
+  const handleDetail =  async (row: any) => {
+    const detail = await detailBrandUseCase(brandRepository, row.id);
+    navigation.navigate('Detail', {param: detail});
+  };
+
   const showAddView = () => {
-    console.log('add');
-    navigation.navigate('Detail');
-        // navigation.dispatch();
-    // window.location.href = 'DataDetail';
+    navigation.navigate('Form');
   };
 
   useEffect(() => {
     handleGetData();
-  }, [pagination.page,
-      pagination.query,
-      pagination.sort,
-      pagination.order]);
+  }, [
+    pagination.page,
+    pagination.query,
+    pagination.sort,
+    pagination.order,
+    handleGetData,
+  ]);
 
   return (
       <View style={styles.dataListContainer}>
@@ -109,10 +133,10 @@ function DataList(props: any) {
           <Table
             headers={headers}
             datas={items}
-            onSelect={(r: any) => {
-              console.log('row = ', r);
-            }}
+            onSelect={handleDetail}
             onHeaderSelect={handleSort}
+            onPressDelete={handleDelete}
+            onPressEdit={handleEdit}
             nextPage={handleNextPage}
             prevPage={handlePrevPage}
           />

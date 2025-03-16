@@ -7,17 +7,17 @@ import {
   } from 'react-native';
 
  function Text_Input(props: any) {
-    const [value, setValue] = useState('');
+    // const [value, setValue] = useState('');
 
     const onChangeText = (val: string) => {
-        setValue(val);
+        // setValue(val);
         props.onChangeText(val);
     };
 
     return (
         <View style={styles.textInputContainer}>
             <TextInput
-                value={value}
+                value={props.value}
                 placeholder={props.title}
                 onChangeText={(text: any) => onChangeText(text)}
             />
