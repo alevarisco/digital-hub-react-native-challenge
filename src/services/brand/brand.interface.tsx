@@ -4,4 +4,5 @@ export interface Brand {
     descripcion: string,
     pais: string,
     tipo: string
+    anioFundacion: number,
 }

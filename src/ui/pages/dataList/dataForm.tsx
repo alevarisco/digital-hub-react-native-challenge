@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
   View,
-  Text,
 } from 'react-native';
-import Title from '../../components/title/title';
 import { withTranslation } from 'react-i18next';
+
+import Title from '../../components/title/title';
 import Button from '../../components/button/button';
 import TextInput from '../../components/text-input/text-input';
+import TextArea from '../../components/text-area/text-area';
+
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Brand } from '@/services/brand/brand.interface';
 import { saveBrandUseCase, saveEditBrandUseCase } from '../../../application/brand/use-get-brands';
@@ -22,6 +24,7 @@ function DataForm(props: any) {
   const [name, setName] = useState('');
   const [country, setCountry] = useState('');
   const [type, setType] = useState('');
+  const [year, setYear] = useState('');
   const [description, setDescription] = useState('');
 
   const handleCleanInputs = () => {
@@ -29,6 +32,7 @@ function DataForm(props: any) {
     setCountry('');
     setType('');
     setDescription('');
+    setYear('');
   };
 
   const handleBack = () => {
@@ -37,7 +41,11 @@ function DataForm(props: any) {
   };
 
   const isFormValid = () => {
-    return name.trim() !== '' && country.trim() !== '' && type.trim() !== '' && description.trim() !== '';
+    return name.trim() !== '' &&
+      country.trim() !== '' &&
+      type.trim() !== '' &&
+      description.trim() !== '' &&
+      year.trim() !== '';
   };
 
   const handleSave = async () => {
@@ -46,13 +54,11 @@ function DataForm(props: any) {
       pais: country,
       tipo: type,
       descripcion: description,
+      anioFundacion: Number(year),
     };
     if(isParamEmpty) {
       await saveBrandUseCase(brandRepository, formData);
-      // handleCleanInputs();
-      // navigation.navigate('DataList');
     }else {
-      console.log('aquiiiiiiii');
       await saveEditBrandUseCase(brandRepository, formData, param.id);
     }
     handleCleanInputs();
@@ -60,17 +66,19 @@ function DataForm(props: any) {
   };
 
   const handleSet = () => {
+    console.log(param);
     setName(param.nombre);
     setCountry(param.pais);
     setType(param.tipo);
     setDescription(param.descripcion);
+    setYear(String(param.anioFundacion));
   };
 
   useEffect(() => {
     if(!isParamEmpty) {
       handleSet();
     }
-  }, []);
+  }, [handleSet, isParamEmpty]);
 
   return (
     <View style={styles.dataFormContainer}>
@@ -106,6 +114,11 @@ function DataForm(props: any) {
             onChangeText={setType}
           />
           <TextInput
+            title={props.t('DATA_ADD.INPUT_YEAR')}
+            value={year}
+            onChangeText={setYear}
+          />
+          <TextArea
             title={props.t('DATA_ADD.INPUT_DESCRIPTION')}
             value={description}
             onChangeText={setDescription}
@@ -142,11 +155,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     gap: 10,
     paddingBottom: 30,
-  },
-  dataFormButtonsContainer: {},
-  error: {
-    color: 'red',
-    marginBottom: 16,
   },
 });
 

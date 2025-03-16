@@ -11,6 +11,9 @@ import {
         <TouchableOpacity
             disabled={props.disabled}
             style={
+                props.disabled ?
+                styles.buttonDisabled
+                :
                 props.style === 'default' ?
                 styles.buttonDefault
                 :
@@ -36,6 +39,14 @@ import {
 }
 
 const styles = StyleSheet.create({
+    buttonDisabled: {
+        backgroundColor: '#d6d6d6',
+        height: 35,
+        borderRadius: 15,
+        paddingHorizontal: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     buttonDefault: {
         backgroundColor: '#3e81ff',
         height: 35,
