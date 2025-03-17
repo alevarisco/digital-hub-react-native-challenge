@@ -30,25 +30,21 @@ const Table = (props: any) => {
                 onPress={() => props.onSelect(row)}
             >
               <View
-                // key={iRow}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.nombre}</Text>
               </View>
               <View
-                // key={iRow + row.id}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.pais}</Text>
               </View>
               <View
-                // key={iRow + row.id + 1}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.tipo}</Text>
               </View>
               <View
-                // key={iRow + row.id  1}
                 style={styles.cellRow}>
                     <TouchableOpacity onPress={() => props.onPressEdit(row)}>
                         <Image source={IconEdit}/>

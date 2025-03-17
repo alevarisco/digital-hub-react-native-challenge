@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React from 'react';
 import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { withTranslation } from 'react-i18next';
@@ -27,7 +27,7 @@ function NavigationMenu(props: any) {
                                 color: '#8a8a89',
                             },
                             tabBarIcon: ({ color, focused }) => (
-                            focused ?
+                            focused ? 
                             <Image source={v.iconSelected} />
                             :
                             <Image source={v.iconUnselected} />

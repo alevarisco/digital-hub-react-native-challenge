@@ -9,6 +9,7 @@ import {
  function Button(props: any) {
     return (
         <TouchableOpacity
+            testID="Button"
             disabled={props.disabled}
             style={
                 props.disabled ?

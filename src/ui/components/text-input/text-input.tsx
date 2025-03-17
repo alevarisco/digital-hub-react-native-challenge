@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import { withTranslation } from 'react-i18next';
 import {
     StyleSheet,
@@ -7,10 +7,8 @@ import {
   } from 'react-native';
 
  function Text_Input(props: any) {
-    // const [value, setValue] = useState('');
 
     const onChangeText = (val: string) => {
-        // setValue(val);
         props.onChangeText(val);
     };
 
