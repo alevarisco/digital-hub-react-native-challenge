@@ -1,6 +1,13 @@
 {
   "HOME": {
-    "TAB_TITLE": "Home"
+    "TAB_TITLE": "Home",
+    "TITLE_PAGE": "Home",
+    "WELCOME_MSG": "Welcome 👋",
+    "LINK_HOME": "Home",
+    "LINK_DATA_LIST": "Data List",
+    "LINK_GEOLOCATION": "Geolocation",
+    "LINK_SETTINGS": "Settings",
+    "ITEM_COUNT": "Total Car Brands: "
   },
   "DATA_LIST": {
     "TAB_TITLE": "Data List",

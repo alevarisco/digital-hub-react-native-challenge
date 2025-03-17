@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
@@ -18,7 +18,7 @@ function Geolocalization(props: any) {
     { title: 'GEOLOCATION.YOUR_LONG', value: isLoading ? 'Loading...' : longitude },
   ];
 
-  return (
+return (
     <View style={styles.geolocalizationContainer}>
         <Title title={props.t('GEOLOCATION.TITLE_PAGE')}/>
         <Content text={locationData} />

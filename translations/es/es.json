@@ -1,6 +1,13 @@
 {
   "HOME": {
-    "TAB_TITLE": "Inicio"
+    "TAB_TITLE": "Inicio",
+    "TITLE_PAGE": "Inicio",
+    "WELCOME_MSG": "Bienvenido 👋",
+    "LINK_HOME": "Inicio",
+    "LINK_DATA_LIST": "Lista de datos",
+    "LINK_GEOLOCATION": "Ubicación",
+    "LINK_SETTINGS": "Ajustes",
+    "ITEM_COUNT": "Total de Marcas de Carros: "
   },
   "DATA_LIST": {
     "TAB_TITLE": "Lista de datos",

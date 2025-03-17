@@ -6,19 +6,20 @@ import { Brand } from './brand.interface';
 export const brandRepository : BrandRepository = {
 
   async getBrands(pagination: Pagination) : Promise<Brand[]> {
-
-    let params : any = {
-      '_page': pagination.page,
-      '_limit': pagination.limit,
-      '_sort': pagination.sort,
-      '_order': pagination.order,
-    };
-
-    if(pagination.query) {
+    let params: any = {};
+    if(pagination){
       params = {
-        ...params,
-        'q': pagination.query,
+        '_page': pagination.page,
+        '_limit': pagination.limit,
+        '_sort': pagination.sort,
+        '_order': pagination.order,
       };
+      if(pagination.query) {
+        params = {
+          ...params,
+          'q': pagination.query,
+        };
+      }
     }
     const res = await apiClient('/brands', {
       method: 'GET',
