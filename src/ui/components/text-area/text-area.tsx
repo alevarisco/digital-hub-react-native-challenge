@@ -13,7 +13,7 @@ import {
     };
 
     return (
-        <View style={styles.textInputContainer}>
+        <View style={styles.textInputContainer} testID="text-area">
             <TextInput
                 value={props.value}
                 placeholder={props.title}

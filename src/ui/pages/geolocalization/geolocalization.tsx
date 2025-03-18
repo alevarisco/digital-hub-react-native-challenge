@@ -19,7 +19,7 @@ function Geolocalization(props: any) {
   ];
 
 return (
-    <View style={styles.geolocalizationContainer}>
+    <View style={styles.geolocalizationContainer} testID="geo-view">
         <Title title={props.t('GEOLOCATION.TITLE_PAGE')}/>
         <Content text={locationData} />
     </View>

@@ -36,7 +36,7 @@ function Settings(props: any) {
   }, [dispatch, isEnglish]);
 
   return (
-    <View style={styles.settingsContainer}>
+    <View style={styles.settingsContainer} testID="settings-view">
       <Title title={props.t('SETTINGS.TITLE_PAGE')}/>
       <View style={styles.settingsBoxPrincipal}>
         <View style={styles.settingsBox}>
@@ -46,6 +46,7 @@ function Settings(props: any) {
           <View style={styles.settingsSwitch}>
             <Image source={IconEnFlag} />
             <Switch
+              testID='settings-view-switch'
               trackColor={{false: '#767577', true: '#81b0ff'}}
               thumbColor={isEnglish ? '#0b577b' : '#f4f3f4'}
               ios_backgroundColor="#3e3e3e"

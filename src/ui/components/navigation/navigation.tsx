@@ -27,7 +27,7 @@ function NavigationMenu(props: any) {
                                 color: '#8a8a89',
                             },
                             tabBarIcon: ({ color, focused }) => (
-                            focused ? 
+                            focused ?
                             <Image source={v.iconSelected} />
                             :
                             <Image source={v.iconUnselected} />

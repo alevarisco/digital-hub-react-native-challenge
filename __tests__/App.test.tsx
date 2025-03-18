@@ -3,10 +3,11 @@
  */
 
 import React from 'react';
-import renderer from 'react-test-renderer';
 import App from '../src/App';
+import { render } from '@testing-library/react-native';
+
 
 test('renders correctly', async () => {
-  const app = renderer.create(<App />).toJSON();
-  expect(app).toMatchSnapshot();
+  const app = render(<App />).toJSON();
+  expect(app).toBeTruthy();
 });

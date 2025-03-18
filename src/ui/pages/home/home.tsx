@@ -16,6 +16,7 @@ import IconUsers from '../../../../assets/images/icon_users.png';
 import IconGeolocation from '../../../../assets/images/icon_hand.png';
 //@ts-ignore
 import IconSettings from '../../../../assets/images/icon_mi_cuenta.png';
+
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBrands } from '../../redux/slices/brandSlice';
@@ -37,7 +38,7 @@ function Home(props: any) {
   );
 
   return (
-    <View style={styles.homeContainer}>
+    <View style={styles.homeContainer} testID="home-view">
       <View style={styles.homeFlexContainer}>
         <View style={styles.homeMainContainer}>
           <Text style={styles.homeTitle}>
@@ -48,6 +49,7 @@ function Home(props: any) {
           <View style={styles.homeContentContainer}>
             <TouchableOpacity
               style={styles.homeLinkContainer}
+              testID="home-view-click-1"
               onPress={() => handleView('Home')}
             >
               <Image source={IconHome}/>
@@ -57,6 +59,7 @@ function Home(props: any) {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.homeLinkContainer}
+              testID="home-view-click-2"
               onPress={() => handleView('DataList')}
             >
               <Image source={IconUsers}/>

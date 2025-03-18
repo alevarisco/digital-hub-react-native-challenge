@@ -20,7 +20,7 @@ describe('Button Component', () => {
 
   it('calls onPress function when the button is clicked', () => {
     const { getByTestId } = render(<Button onPress={defaultProps.onPress}/>);
-    const pressButton = getByTestId('Button');
+    const pressButton = getByTestId('button');
     fireEvent.press(pressButton);
     expect(defaultProps.onPress).toHaveBeenCalled();
   });
@@ -36,13 +36,6 @@ describe('Button Component', () => {
 
     expect(getByText('Click Me')).toBeTruthy();
   });
-
-  // it('renders correctly when disabled', () => {
-  //   const { getByText } = render(<Button {...defaultProps} disabled={true} style="default" />);
-
-  //   expect(getByText('Click Me')).toBeTruthy();
-  //   expect(getByText('Click Me').parent.props.disabled).toBe(true);
-  // });
 
   it('calls onPress when pressed', () => {
     const onPressMock = jest.fn();
@@ -62,30 +55,4 @@ describe('Button Component', () => {
     expect(onPressMock).not.toHaveBeenCalled();
   });
 
-//   it('matches snapshot with default style', () => {
-//     let tree;
-//     act(() => {
-//       tree = render(<Button {...defaultProps} style="default" />).toJSON();
-//     });
-
-//     expect(tree).toMatchSnapshot();
-//   });
-
-//   it('matches snapshot with outline style', () => {
-//     let tree;
-//     act(() => {
-//       tree = render(<Button {...defaultProps} style="outline" />).toJSON();
-//     });
-
-//     expect(tree).toMatchSnapshot();
-//   });
-
-  // it('matches snapshot when disabled', () => {
-  //   let tree;
-  //   act(() => {
-  //     tree = render(<Button {...defaultProps} disabled={true}  />).toJSON();
-  //   });
-
-  //   expect(tree).toMatchSnapshot();
-  // });
 });
