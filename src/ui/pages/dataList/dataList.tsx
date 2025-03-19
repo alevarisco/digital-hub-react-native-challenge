@@ -52,7 +52,7 @@ function DataList(props: any) {
     },
   ];
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   const handleGetData = async () => {
     let data = await brandUseCase(brandRepository, pagination);
     dispatch(fetchItemsSuccess({ items: data }));
@@ -102,13 +102,11 @@ function DataList(props: any) {
 
   useEffect(() => {
     handleGetData();
-  }, [
-    pagination.page,
-    pagination.query,
-    pagination.sort,
-    pagination.order,
-    handleGetData,
-  ]);
+  }, [pagination.page,
+      pagination.query,
+      pagination.sort,
+      pagination.order,
+      props]);
 
   return (
       <View style={styles.dataListContainer} testID="datalist-view">

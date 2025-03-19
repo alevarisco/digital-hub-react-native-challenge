@@ -1,6 +1,6 @@
 import { brandUseCase } from '../../../application/brand/use-get-brands';
 import { brandRepository } from '../../../services/brand/brandRepositoryImpl';
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 
 export const fetchBrands = createAsyncThunk('brands/fetchBrands', async () => {
   const data = await brandUseCase(brandRepository, undefined);
@@ -28,6 +28,5 @@ const brandsSlice = createSlice({
       });
   },
 });
-
 export default brandsSlice.reducer;
 

@@ -6,7 +6,7 @@ const initialState: BrandTableState = {
   items: [],
   pagination: {
     page: 1,
-    limit: 10,
+    limit: 7,
     sort: '',
     order: 'ASC',
     end: false,
@@ -36,6 +36,7 @@ const tableSlice = createSlice({
     setQuery(state, action: PayloadAction<string>) {
       state.pagination.query = action.payload;
     },
+
   },
 });
 

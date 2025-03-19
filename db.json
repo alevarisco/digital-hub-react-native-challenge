@@ -2,11 +2,11 @@
   "brands": [
     {
       "nombre": "BYD",
-      "pais": "China",
+      "pais": "Chinas",
       "tipo": "Eléctricos",
       "descripcion": "Líder en vehículos eléctricos y baterías, con un rápido crecimiento en el mercado global.",
-      "id": "4",
-      "anioFundacion": 2003
+      "anioFundacion": 2003,
+      "id": "4"
     },
     {
       "id": "5",
@@ -119,6 +119,14 @@
       "descripcion": "Famosa por su seguridad y diseño escandinavo, ahora bajo Geely y enfocada en eléctricos.",
       "tipo": "Premium/Eléctricos",
       "anioFundacion": 1927
+    },
+    {
+      "nombre": "Opel",
+      "pais": "Spain",
+      "tipo": "Carreras",
+      "descripcion": "Carros",
+      "anioFundacion": 2020,
+      "id": "7TeHSNA"
     }
   ]
 }

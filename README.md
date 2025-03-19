@@ -24,6 +24,10 @@ _Then you should run then next:_
 ```
 cd ios && pod install && cd ..
 ```
+_For the json-server you should install the next:_
+```
+npm i json-server@0.17.4
+```
 ### How to run 📱
 
 _For start on ios:_

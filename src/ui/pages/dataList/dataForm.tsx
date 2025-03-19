@@ -62,11 +62,11 @@ function DataForm(props: any) {
       await saveEditBrandUseCase(brandRepository, formData, param.id);
     }
     handleCleanInputs();
-    navigation.navigate('DataList');
+    navigation.navigate('DataList', {'refresh': true});
+
   };
 
   const handleSet = () => {
-    console.log(param);
     setName(param.nombre);
     setCountry(param.pais);
     setType(param.tipo);
@@ -78,7 +78,7 @@ function DataForm(props: any) {
     if(!isParamEmpty) {
       handleSet();
     }
-  }, [handleSet, isParamEmpty]);
+  }, [isParamEmpty]);
 
   return (
     <View style={styles.dataFormContainer}>
