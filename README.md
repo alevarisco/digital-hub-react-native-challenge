@@ -16,37 +16,29 @@ _To install the project you should run:_
 ```
 npm install
 ```
-_or_
-```
-yarn install
-```
 _Then you should run then next:_
 ```
 cd ios && pod install && cd ..
 ```
-_For the json-server you should install the next:_
-```
-npm i json-server@0.17.4
-```
 ### How to run 📱
 
+_First of all, for start the json-server, you should run the next command:_
+```
+npm run db
+```
 _For start on ios:_
 ```
 npm run ios
 ```
 _For start on android:_
 ```
-npm run android_
-```
-_For start the json-server, you should run the next command:_
-```
-npm run db
+npm run android
 ```
 
 
 ### Running testing ⚙️
 ```
-npm run test_
+npm run test
 ```
 
 ## Repository 📌
@@ -54,5 +46,5 @@ npm run test_
 https://github.com/alevarisco/digital-hub-react-native-challenge
 
 
-## Athor ✒️
+## Author ✒️
 * **Alessandra Varisco** - *Frontend Developer*
