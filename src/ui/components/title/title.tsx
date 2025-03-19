@@ -1,9 +1,13 @@
 import React from 'react';
 import {
+    Dimensions,
     StyleSheet,
     Text,
     View,
   } from 'react-native';
+
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+
 
 export default function Title(props: any) {
     return (
@@ -22,7 +26,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: 20,
+        fontSize: SCREEN_WIDTH < 400 ? 18 : 20,
         fontWeight: 'bold',
         color: '#001b2d',
     },

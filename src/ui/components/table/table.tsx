@@ -1,10 +1,12 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
-import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image, Dimensions } from 'react-native';
 import Button from '../button/button';
 
 import IconEdit from '../../../../assets/images/pencil.png';
 import IconDelete from '../../../../assets/images/trash.png';
+
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 const Table = (props: any) => {
 
@@ -99,15 +101,15 @@ const styles = StyleSheet.create({
   },
   textCell: {
     fontFamily: 'Open Sans, sans-serif',
-    fontSize: 16,
+    fontSize: SCREEN_WIDTH < 400 ? 14 : 16,
   },
   textHeader: {
     fontFamily: 'Open Sans, sans-serif',
-    fontSize: 16,
+    fontSize: SCREEN_WIDTH < 400 ? 14 : 16,
     fontWeight: 'bold',
   },
   btnContainer: {
-    width: '95%',
+    width: '90%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingTop: 10,
