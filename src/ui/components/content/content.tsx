@@ -1,10 +1,13 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 import {
+    Dimensions,
     StyleSheet,
     Text,
     View,
   } from 'react-native';
+
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
  function Content(props: any) {
     if (!props.text) {return null;}
@@ -44,13 +47,13 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: 16,
+        fontSize: SCREEN_WIDTH < 400 ? 14 : 16,
         fontWeight: 'bold',
         color: '#001b2d',
     },
     text: {
         fontFamily: 'Open Sans, sans-serif',
-        fontSize: 16,
+        fontSize: SCREEN_WIDTH < 400 ? 14 : 16,
         color: '#001b2d',
     },
   });
