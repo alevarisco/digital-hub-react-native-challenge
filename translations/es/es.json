@@ -1,0 +1,67 @@
+{
+  "HOME": {
+    "TAB_TITLE": "Inicio",
+    "TITLE_PAGE": "Inicio",
+    "WELCOME_MSG": "Bienvenido 👋",
+    "LINK_HOME": "Inicio",
+    "LINK_DATA_LIST": "Lista de datos",
+    "LINK_GEOLOCATION": "Ubicación",
+    "LINK_SETTINGS": "Ajustes",
+    "ITEM_COUNT": "Total de Marcas de Carros: "
+  },
+  "DATA_LIST": {
+    "TAB_TITLE": "Lista de datos",
+    "TITLE_PAGE": "Lista de datos",
+    "BTN_ADD": "Agregar",
+    "BTN_ADD_SIGN": "+",
+    "BTN_DELETE": "Eliminar",
+    "BTN_EDIT": "Editar",
+    "BTN_SEARCH": "Buscar",
+    "INPUT_SEARCH_NAME": "Buscar",
+    "TABLE": {
+      "COL1": "Marca",
+      "COL2": "País",
+      "COL3": "Tipo",
+      "COL4": "Acciones"
+    }
+  },
+  "DATA_DETAIL": {
+    "TAB_TITLE": "Detalle",
+    "TITLE_PAGE": "Detalle de la marca",
+    "TEXT_NAME": "Nombre de la marca",
+    "TEXT_COUNTRY": "País",
+    "TEXT_TYPE": "Tipo",
+    "TEXT_YEAR": "Año de fundación",
+    "TEXT_DESCRIPTION": "Descripción"
+  },
+  "DATA_ADD": {
+    "TITLE_PAGE": "Agrega una nueva marca",
+    "TITLE_DETAIL_PAGE": "Edita la marca",
+    "INPUT_NAME": "Nombre",
+    "INPUT_COUNTRY": "País",
+    "INPUT_TYPE": "Tipo",
+    "INPUT_DESCRIPTION": "Descripción",
+    "INPUT_YEAR": "Año de fundación",
+    "BTN_ADD": "Agregar",
+    "BTN_EDIT": "Editar",
+    "BTN_LOADING": "Cargando...",
+    "BTN_BACK": "Atrás"
+  },
+  "GEOLOCATION": {
+    "TAB_TITLE": "Ubicación",
+    "TITLE_PAGE": "Ubicación actual",
+    "YOUR_LAT": "Tu latitud es: ",
+    "YOUR_LONG": "Tu longitud es: "
+  },
+  "SETTINGS": {
+    "TAB_TITLE": "Ajustes",
+    "TITLE_PAGE": "Ajustes",
+    "SUBTITLE_PAGE": "Idioma actual"
+  }, 
+  "COMPONENTS": {
+    "TABLE": {
+      "BTN_NEXT": "Siguiente",
+      "BTN_PREV": "Previa"
+    }
+  }
+}

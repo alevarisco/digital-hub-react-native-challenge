@@ -1,0 +1,66 @@
+{
+  "HOME": {
+    "TAB_TITLE": "Home",
+    "TITLE_PAGE": "Home",
+    "WELCOME_MSG": "Welcome 👋",
+    "LINK_HOME": "Home",
+    "LINK_DATA_LIST": "Data List",
+    "LINK_GEOLOCATION": "Geolocation",
+    "LINK_SETTINGS": "Settings",
+    "ITEM_COUNT": "Total Car Brands: "
+  },
+  "DATA_LIST": {
+    "TAB_TITLE": "Data List",
+    "TITLE_PAGE": "Data List",
+    "BTN_ADD": "Add",
+    "BTN_ADD_SIGN": "+",
+    "BTN_DELETE": "Delete",
+    "BTN_EDIT": "Edit",
+    "BTN_SEARCH": "Search",
+    "INPUT_SEARCH_NAME": "Search",
+    "TABLE": {
+      "COL1": "Brand",
+      "COL2": "Country",
+      "COL3": "Type",
+      "COL4": "Actions"
+    }
+  },
+  "DATA_DETAIL": {
+    "TAB_TITLE": "Detail",
+    "TITLE_PAGE": "Brand Detail",
+    "TEXT_NAME": "Brand name",
+    "TEXT_COUNTRY": "Country",
+    "TEXT_TYPE": "Type",
+    "TEXT_YEAR": "Year of foundation",
+    "TEXT_DESCRIPTION": "Description"
+  },
+  "DATA_ADD": {
+    "TITLE_PAGE": "Add a new brand",
+    "TITLE_DETAIL_PAGE": "Edit the brand",
+    "INPUT_NAME": "Name",
+    "INPUT_COUNTRY": "Country",
+    "INPUT_TYPE": "Type",
+    "INPUT_DESCRIPTION": "Description",
+    "INPUT_YEAR": "Year of foundation",
+    "BTN_ADD": "Add",
+    "BTN_EDIT": "Edit",
+    "BTN_BACK": "Back"
+  },
+  "GEOLOCATION": {
+    "TAB_TITLE": "Geolocation",
+    "TITLE_PAGE": "Currently Geolocation",
+    "YOUR_LAT": "Your latitude is: ",
+    "YOUR_LONG": "Your longitude is: "
+  },
+  "SETTINGS": {
+    "TAB_TITLE": "Settings",
+    "TITLE_PAGE": "Settings",
+    "SUBTITLE_PAGE": "Current language"
+  },
+  "COMPONENTS": {
+    "TABLE": {
+      "BTN_NEXT": "Next",
+      "BTN_PREV": "Prev"
+    }
+  }
+}
