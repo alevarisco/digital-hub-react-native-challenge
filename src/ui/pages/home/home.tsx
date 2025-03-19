@@ -69,6 +69,7 @@ function Home(props: any) {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.homeLinkContainer}
+                testID="home-view-click-3"
                 onPress={() => handleView('Geolocation')}
               >
               <Image source={IconGeolocation} style={styles.homeIconLink}/>
@@ -78,6 +79,7 @@ function Home(props: any) {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.homeLinkContainer}
+                testID="home-view-click-4"
                 onPress={() => handleView('Settings')}
               >
               <Image source={IconSettings} style={styles.homeIconLink}/>
