@@ -9,11 +9,11 @@ import IconDelete from '../../../../assets/images/trash.png';
 const Table = (props: any) => {
 
   return (
-    <ScrollView horizontal={false} alwaysBounceVertical={false}>
+    <ScrollView horizontal={false} alwaysBounceVertical={false} testID="table">
       <View style={styles.table}>
         {/* Headers */}
         <View style={styles.row}>
-          {props.headers.map((h: any, i: number) => (
+          {props.headers && props.headers.map((h: any, i: number) => (
             <TouchableOpacity
                 key={i}
                 style={styles.cellHeader}
@@ -28,32 +28,29 @@ const Table = (props: any) => {
         {props.datas && props.datas.map((row: any, iRow: number) => (
           <TouchableOpacity key={iRow} style={styles.row}
                 onPress={() => props.onSelect(row)}
+                testID={`row-${iRow}`}
             >
               <View
-                // key={iRow}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.nombre}</Text>
               </View>
               <View
-                // key={iRow + row.id}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.pais}</Text>
               </View>
               <View
-                // key={iRow + row.id + 1}
                 style={styles.cell}
                 >
                 <Text style={styles.textCell}>{row.tipo}</Text>
               </View>
               <View
-                // key={iRow + row.id  1}
                 style={styles.cellRow}>
-                    <TouchableOpacity onPress={() => props.onPressEdit(row)}>
+                    <TouchableOpacity testID={`edit-button-${iRow}`} onPress={() => props.onPressEdit(row)}>
                         <Image source={IconEdit}/>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => props.onPressDelete(row)}>
+                    <TouchableOpacity testID={`delete-button-${iRow}`} onPress={() => props.onPressDelete(row)}>
                         <Image source={IconDelete}/>
                     </TouchableOpacity>
               </View>

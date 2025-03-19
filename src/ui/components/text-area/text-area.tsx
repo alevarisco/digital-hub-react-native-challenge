@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { withTranslation } from 'react-i18next';
 import {
     StyleSheet,
@@ -7,15 +7,13 @@ import {
   } from 'react-native';
 
  function Text_Area(props: any) {
-    // const [value, setValue] = useState('');
 
     const onChangeText = (val: string) => {
-        // setValue(val);
         props.onChangeText(val);
     };
 
     return (
-        <View style={styles.textInputContainer}>
+        <View style={styles.textInputContainer} testID="text-area">
             <TextInput
                 value={props.value}
                 placeholder={props.title}

@@ -111,7 +111,7 @@ function DataList(props: any) {
   ]);
 
   return (
-      <View style={styles.dataListContainer}>
+      <View style={styles.dataListContainer} testID="datalist-view">
         <Title title={props.t('DATA_LIST.TITLE_PAGE')}
           button={
             <Button

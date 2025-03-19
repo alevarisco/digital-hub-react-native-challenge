@@ -7,7 +7,7 @@ import {
 
 export default function Title(props: any) {
     return (
-        <View style={styles.titleContainer}>
+        <View style={styles.titleContainer} testID="title">
             <Text style={styles.title}>{props.title}</Text>
             {props.button ? props.button : null}
         </View>

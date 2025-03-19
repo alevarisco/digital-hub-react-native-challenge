@@ -8,8 +8,8 @@ export default function useLocation()  {
     useEffect(() => {
       (async () => {
         Geolocation.getCurrentPosition(
-            (position: any) => {
-                const { latitude, longitude } = position.coords;
+          (position: any) => {
+            const { latitude, longitude } = position.coords;
                 setLocation({
                     latitude: latitude,
                     longitude: longitude,
