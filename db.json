@@ -1,0 +1,124 @@
+{
+  "brands": [
+    {
+      "nombre": "BYD",
+      "pais": "China",
+      "tipo": "Eléctricos",
+      "descripcion": "Líder en vehículos eléctricos y baterías, con un rápido crecimiento en el mercado global.",
+      "id": "4",
+      "anioFundacion": 2003
+    },
+    {
+      "id": "5",
+      "nombre": "Chevrolet",
+      "pais": "Estados Unidos",
+      "descripcion": "Parte de General Motors, ofrece desde muscle cars como el Camaro hasta SUVs y pickups.",
+      "tipo": "Generalista",
+      "anioFundacion": 1911
+    },
+    {
+      "id": "6",
+      "nombre": "Ferrari",
+      "pais": "Italia",
+      "descripcion": "Marca legendaria de superdeportivos, sinónimo de velocidad y exclusividad.",
+      "tipo": "Superdeportivos",
+      "anioFundacion": 1939
+    },
+    {
+      "id": "7",
+      "nombre": "Ford",
+      "pais": "Estados Unidos",
+      "descripcion": "Conocida por sus pickups (F-150) y modelos icónicos como el Mustang, también avanza en eléctricos.",
+      "tipo": "Generalista",
+      "anioFundacion": 1903
+    },
+    {
+      "id": "8",
+      "nombre": "Honda",
+      "pais": "Japón",
+      "descripcion": "Famosa por su fiabilidad, con modelos populares como el Civic y el Accord.",
+      "tipo": "Generalista",
+      "anioFundacion": 1948
+    },
+    {
+      "id": "9",
+      "nombre": "Hyundai",
+      "pais": "Corea del Sur",
+      "descripcion": "Destaca por su innovación, calidad y expansión en vehículos eléctricos como el Ioniq.",
+      "tipo": "Generalista/Eléctricos",
+      "anioFundacion": 1967
+    },
+    {
+      "id": "10",
+      "nombre": "Jaguar",
+      "pais": "Reino Unido",
+      "descripcion": "Parte de Tata Motors, conocida por sus coches de lujo y deportivos elegantes.",
+      "tipo": "Lujo",
+      "anioFundacion": 1935
+    },
+    {
+      "id": "11",
+      "nombre": "Lamborghini",
+      "pais": "Italia",
+      "descripcion": "Superdeportivos de diseño radical y alto rendimiento, parte del grupo Volkswagen.",
+      "tipo": "Superdeportivos",
+      "anioFundacion": 1963
+    },
+    {
+      "id": "12",
+      "nombre": "Mercedes-Benz",
+      "pais": "Alemania",
+      "descripcion": "Sinónimo de lujo, innovación y tecnología, con una amplia gama de modelos.",
+      "tipo": "Lujo",
+      "anioFundacion": 1926
+    },
+    {
+      "id": "13",
+      "nombre": "NIO",
+      "pais": "China",
+      "descripcion": "Marca premium de vehículos eléctricos, conocida por su tecnología y diseño futurista.",
+      "tipo": "Eléctricos",
+      "anioFundacion": 2014
+    },
+    {
+      "id": "14",
+      "nombre": "Porsche",
+      "pais": "Alemania",
+      "descripcion": "Deportivos de alto rendimiento y lujo, famosa por el 911 y ahora con eléctricos como el Taycan.",
+      "tipo": "Lujo/Deportivos",
+      "anioFundacion": 1931
+    },
+    {
+      "id": "15",
+      "nombre": "Tesla",
+      "pais": "Estados Unidos",
+      "descripcion": "Pionera en vehículos eléctricos, conocida por su tecnología autónoma y modelos como el Model 3.",
+      "tipo": "Eléctricos",
+      "anioFundacion": 2003
+    },
+    {
+      "id": "16",
+      "nombre": "Toyota",
+      "pais": "Japón",
+      "descripcion": "Líder mundial en fiabilidad y pionera en híbridos con el Prius, ofrece una amplia gama.",
+      "tipo": "Generalista/Híbridos",
+      "anioFundacion": 1937
+    },
+    {
+      "id": "17",
+      "nombre": "Volkswagen",
+      "pais": "Alemania",
+      "descripcion": "Una de las marcas más grandes del mundo, con modelos populares como el Golf y avances en eléctricos.",
+      "tipo": "Generalista",
+      "anioFundacion": 1937
+    },
+    {
+      "id": "18",
+      "nombre": "Volvo",
+      "pais": "Suecia",
+      "descripcion": "Famosa por su seguridad y diseño escandinavo, ahora bajo Geely y enfocada en eléctricos.",
+      "tipo": "Premium/Eléctricos",
+      "anioFundacion": 1927
+    }
+  ]
+}
